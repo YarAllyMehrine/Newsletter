@@ -1,0 +1,197 @@
+:root {
+    --tomato : hsl(4, 100%, 67%);
+    --light-tomato : rgba(255, 99, 71, 0.1);
+    --dark-slate-grey : hsl(234, 29%, 20%);
+    --charcoal-grey : hsl(235, 18%, 26%);
+    --grey : hsl(231, 7%, 60%);
+    --white : hsl(0, 0%, 100%);
+}
+
+*,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    color: var(--dark-slate-grey);
+    font-weight: 400;
+    overflow-x: hidden;
+    font-family: "Roboto";
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding-bottom: 5px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+ul li { 
+    list-style: outside url(./assets/images/icon-list.svg); 
+} 
+
+.list-item {
+    margin-left: 1.9rem;
+}
+
+#subscription-icon {
+    width: 50px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#desktop-img {
+    display: none;
+}
+
+#mobile-img {
+    display: block;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1.5rem;
+}
+
+.label-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+h1, p, li {
+    padding: 0.5rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+form input, button  {
+    display: inline-block;
+    margin-top: 0.8rem;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+}
+
+.email {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+button {
+    background-color: var(--dark-slate-grey);
+    border-color: var(--dark-slate-grey);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--tomato);
+    box-shadow: 0 1px 15px var(--tomato);
+    border: none;
+}
+
+#mobile-img {
+    width: 100%;
+}
+
+#success-img {
+    margin-left: 1.2rem; 
+}
+
+.success-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+    padding-top: 1rem; 
+    
+}
+
+input.error {
+    border-color: var(--tomato); 
+    color: var(--tomato);
+    background-color: var(--light-tomato); 
+}
+
+input.error::placeholder {
+    color: var(--tomato); 
+}
+
+.error-msg {
+    color: var(--tomato);
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    flex: 1; 
+    text-align: right; 
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: var(--charcoal-grey);
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        height: 100vh;
+    }
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        background-color: var(--white);
+        max-width: 900px;
+        border-radius: 15px;
+    }
+    
+    #desktop-img {
+        display: block;
+    }
+
+    #mobile-img {
+        display: none;
+    }
+
+    h1 {
+        font-size: 3.3rem;
+    }
+
+    .success-page {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        padding: 0 50%; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .success-page h1 {
+        font-size: 2rem;
+    }
+
+    .success-page #success-img {
+        width: 50px;
+    }
+}
