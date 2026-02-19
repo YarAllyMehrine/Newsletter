@@ -29,13 +29,15 @@ $(document).ready(() => {
 
 function submissionText() {
     $(".title").text("Thanks for subscribing!");
-    $("p").text("A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.");
+    $(".message-text").text("A confirmation email has been sent to <strong>${email}</strong>. 
+                            Please open it and click the button inside to confirm your subscription.");
     $("#subscribe-btn").text("Dismiss message");
     $(".list-item, .email, .error-msg").addClass("hidden");
     $("#mobile-img, #desktop-img").addClass("hidden");
     $("#success-img").removeClass("hidden");
     $("body").addClass("success-page");
 }
+
 
 
 
