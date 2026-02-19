@@ -28,7 +28,7 @@ $(document).ready(() => {
     handleError();
 })
 
-function submissionText() {
+function submissionText(email) {
     $(".title").text("Thanks for subscribing!");
     $(".message-text").text("A confirmation email has been sent to <strong>${email}</strong>. 
                             Please open it and click the button inside to confirm your subscription.");
@@ -38,6 +38,7 @@ function submissionText() {
     $("#success-img").removeClass("hidden");
     $("body").addClass("success-page");
 }
+
 
 
 
