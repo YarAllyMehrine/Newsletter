@@ -16,7 +16,8 @@ function handleError () {
     })
     $("#subscribe-btn").click(function() {
         if (isValidEmail) {
-            submissionText();
+            console.log(email);
+            submissionText(email);
         } else {
             $(".error-msg").removeClass("hidden");
         }
@@ -37,6 +38,7 @@ function submissionText() {
     $("#success-img").removeClass("hidden");
     $("body").addClass("success-page");
 }
+
 
 
 
